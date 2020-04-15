@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Mr-Taki.GitHub.io</id>
-    <title>りゅうの絵画駅</title>
-    <updated>2020-04-15T15:19:41.636Z</updated>
+    <title>りゅう</title>
+    <updated>2020-04-15T15:23:35.895Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Mr-Taki.GitHub.io"/>
     <link rel="self" href="https://Mr-Taki.GitHub.io/atom.xml"/>
     <subtitle>りゅう的个人博客</subtitle>
     <logo>https://Mr-Taki.GitHub.io/images/avatar.png</logo>
     <icon>https://Mr-Taki.GitHub.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, りゅうの絵画駅</rights>
+    <rights>All rights reserved 2020, りゅう</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://Mr-Taki.GitHub.io/post/hello-gridea/</id>
