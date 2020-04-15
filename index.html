@@ -4,11 +4,11 @@
       <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
+<meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="りゅう的个人博客">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#000">
 <title>りゅうの絵画駅</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586963501948">
+<link rel="shortcut icon" href="/favicon.ico?v=1586963935349">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
 
@@ -32,9 +32,9 @@
     <div class="head-top-line"></div>
     <div class="header-box">
       
-<div class=" ">
+<div class=" pisces">
   <header class="header  ">
-    <div class="blog-header box-shadow-wrapper  " id="header">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
       <div class="nav-toggle" id="nav_toggle">
         <div class="toggle-box">
           <div class="line line-top"></div>
@@ -51,54 +51,82 @@
           
         </div>
         
+          <p class="subtitle">精于心，简于形</p>
+        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
             
             
+              
+            
             <li class="nav-item nav-item-active">
               
               
-                <a href="/" target="_self">
-                  <i class="fa fa-home"></i> 首页
-                </a>
+                
+                  <a href="/" target="_self">
+                    <i class="fa fa-home"></i> 首页
+                  </a>
+                
               
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
               
-                <a href="/archives" target="_self">
-                  <i class="fa fa-archive"></i> 归档
-                </a>
+                
+                  <a href="/archives" target="_self">
+                    <i class="fa fa-archive"></i> 归档
+                  </a>
+                
               
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
               
-                <a href="/tags" target="_self">
-                  <i class="fa fa-tags"></i> 标签
-                </a>
+                
+                  <a href="/tags" target="_self">
+                    <i class="fa fa-tags"></i> 标签
+                  </a>
+                
               
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
               
-                <a href="/post/about" target="_self">
-                  <i class="fa fa-user"></i> 关于
-                </a>
+                
+                  <a href="/post/about" target="_self">
+                    <i class="fa fa-user"></i> 关于
+                  </a>
+                
               
             </li>
           
+          
+            
+              <li class="nav-item ">
+                <a href="/friends" target="_self">
+                  
+                    fa-ship友情链接
+                  
+                </a>
+              </li>
+            
           
         </ul>
       </nav>
@@ -130,7 +158,7 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  ">
+      <div class="section-layout pisces ">
         <div class="section-layout-wrapper">
           <div id="sidebarMeta" class="sidebar">
     
@@ -163,12 +191,14 @@
   </div>
   
     
-      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://Mr-Taki.GitHub.io/atom.xml" target="_blank">RSS</a>
+        </span>
       </div>
     
   
-  
-
   
 
 
@@ -176,7 +206,7 @@
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = '';
+  let scheme = 'pisces';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -188,7 +218,7 @@
     });
   }
   </script>
-          <div class="section-box ">
+          <div class="section-box pisces">
             <section class="section bg-color posts-expand slide-down-in">
               
   <article class="post-list-box  post box-shadow-wrapper">
@@ -235,9 +265,21 @@
 </header>
       <div class="post-body">
         
-          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+          
+          
+            
+            
+              <p>
+              
+            
+              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
+              
+                <img src="/post-images/hello-gridea.png" />
+              
+            
+          
         
         
         <div class="post-button text-center">
@@ -287,7 +329,7 @@
   </footer>
   
   
-  <div class=" back-to-top" id="back_to_top">
+  <div class="pisces back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
     <span class="scrollpercent">
@@ -296,13 +338,47 @@
     
   </div>
   
-    <div class="bg-img">
-      <img src="" />
-    </div>
-  
   
   
     
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div class="aplayer" id="aplayer"></div>
+  <input hidden id="player_cover" value="" />
+  <div class="music-list">
+  
+    
+    <input hidden value=",,," />
+  
+    
+    <input hidden value=",,," />
+  
+  </div>
+  <script>
+  let musics = document.querySelector('.music-list').children;
+  let mediaMusic = [];
+  let cover = document.querySelector('#player_cover').value;
+  for (let i = 0; i < musics.length; i++) {
+    let item = musics[i];
+    let splits = item.value.split(',');
+    mediaMusic.push({
+      name: splits[0],
+      artist: splits[1],
+      url: splits[2],
+      lrc: splits[3],
+      cover: cover
+    });
+  }
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      lrcType: 3,
+      listFolded: false,
+      listMaxHeight: 90,
+      audio: mediaMusic
+  });
+  </script>
+
 
   
 </div>
@@ -437,7 +513,7 @@
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'false'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
